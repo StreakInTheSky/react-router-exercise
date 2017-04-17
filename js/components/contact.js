@@ -1,11 +1,14 @@
 // js/components/contact.js
 import React from 'react';
+import {Link} from 'react-router';
 
 export default function Contact(props) {
     return (
         <div>
             <strong>
-                {props.name}
+                <Link to={'/contacts/' + props.id}>
+                    {props.name}
+                </Link>
             </strong>
             &nbsp;
             {props.phoneNumber}
